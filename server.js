@@ -156,7 +156,7 @@ var express  = require('express'),
  * 'mongodb://example:example@ds053312.mongolab.com:53312/todolist'
  */
 mongoose.connect(process.env.MONGOLAB_URI, function (error) {
-    if (error) console.error(error);
+    if (error) console.error("Mongo connection error");
     else console.log('mongo connected');
 });
 
