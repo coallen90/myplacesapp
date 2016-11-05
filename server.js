@@ -169,19 +169,19 @@ express()
     res.json(200, {msg: 'OK' });
   })
 
-  .get('/api/todos', function (req, res) {
+  .get('/api/places', function (req, res) {
     // http://mongoosejs.com/docs/api.html#query_Query-find
-    Todo.find( function ( err, todos ){
-      res.json(200, todos);
+    Place.find( function ( err, places ){
+      res.json(200, places);
     });
   })
 
-  .post('/api/todos', function (req, res) {
-    var todo = new Todo( req.body );
-    todo.id = todo._id;
+  .post('/api/places', function (req, res) {
+    var place = new Place( req.body );
+    place.id = place._id;
     // http://mongoosejs.com/docs/api.html#model_Model-save
-    todo.save(function (err) {
-      res.json(200, todo);
+    place.save(function (err) {
+      res.json(200, place);
     });
   })
 
