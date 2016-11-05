@@ -138,13 +138,13 @@ var express  = require('express'),
     bodyParser = require('body-parser'),
 
     // Mongoose Schema definition
-    Schema = new mongoose.Schema({
-      id       : String, 
-      title    : String,
-      completed: Boolean
+    PlaceSchema = new mongoose.Schema({
+      id       : String,
+      name: String,
+      description: String
     }),
 
-    Todo = mongoose.model('Todo', Schema);
+    Place = mongoose.model('Place', PlaceSchema);
 
 /*
  * I’m sharing my credential here.
